@@ -1,79 +1,58 @@
-.footer {
-    background-color: #ffffff;
-    padding: 20px;
-  }
-  
-  .you-may-like-heading {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .carousel-container {
-    display: flex;
-    align-items: center;
-    overflow-x: hidden;
-    position: relative;
-  }
-  
-  .carousel {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .carousel-item {
-    flex: 0 0 auto;
-    width: 300px; /* Adjust width as needed */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-  }
-  
-  .crypto-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .crypto-item img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-  }
-  
-  .price-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 16px;
-  }
-  
-  .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: #333;
-  }
-  
-  .prev-button {
-    left: 0;
-  }
-  
-  .next-button {
-    right: 0;
-  }
-  .carousel-container {
-    overflow-x: hidden; /* Hide horizontal scrollbar initially */
-    white-space: nowrap;
+/* FooterCarousel.css */
+.footer-carousel {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
 }
-  
-  .carousel-item {
-    display: inline-block; /* Display carousel items in a row */
-    width: 300px; /* Adjust the width of each carousel item */
-  }
-  
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  width: 300px; /* Adjust the width of each carousel item */
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  margin-right: 10px; /* Adjust the margin between items */
+  position: relative;
+}
+
+.price-info {
+  margin-bottom: 10px;
+}
+
+.action-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.action-button:hover {
+  background-color: #2980b9;
+}
+
+.nav-button {
+  font-size: 24px;
+  color: #3498db;
+  padding-right: 100px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav-button:hover {
+  color: #2980b9;
+}

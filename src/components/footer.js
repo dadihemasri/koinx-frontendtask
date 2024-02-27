@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import './footer.css'; // Import the CSS file for styling
+import './footer.css'; 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
@@ -10,7 +10,7 @@ function Footer() {
         const carousel = document.querySelector('.carousel');
         const prevButton = document.querySelector('.prev-button');
         const nextButton = document.querySelector('.next-button');
-        const scrollAmount = 300; // Adjust this to the width of a single carousel item
+        const scrollAmount = 300; 
 
         const scrollCarousel = (scrollOffset) => {
             carousel.scrollBy({
@@ -30,11 +30,11 @@ function Footer() {
         prevButton.addEventListener('click', handlePrevButtonClick);
         nextButton.addEventListener('click', handleNextButtonClick);
 
-        // Initial scroll position to hide the first two items
+        
         carousel.scrollLeft = scrollAmount * 2;
 
         return () => {
-            // Clean up event listeners if the component unmounts
+       
             prevButton.removeEventListener('click', handlePrevButtonClick);
             nextButton.removeEventListener('click', handleNextButtonClick);
         };

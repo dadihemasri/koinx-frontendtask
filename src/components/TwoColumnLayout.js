@@ -1,9 +1,7 @@
-
-
-import React from 'react';
-import './TwoColumnLayout.css'; // Import the CSS file for styling
-import bitcoinLogo from './bitcoin-logo.png'; // Import the Bitcoin logo image
-import koinLogo from './koin-logo.png'; // Import the Koin logo image
+import React, { useState, useEffect } from 'react'
+import './TwoColumnLayout.css'; 
+import bitcoinLogo from './bitcoin-logo.png'; 
+import koinLogo from './koin-logo.png'; 
 import TradingViewWidget from './TradingViewWidget';
 import Polygon from './Polygon.png';
 import BitcoinPrice from './Bitcoin';
@@ -11,6 +9,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 function TwoColumnLayout() {
+  const [trendingCoins, setTrendingCoins] = useState([]);
+  
+    useEffect(() => {
+      const fetchTrendingCoins = async () => {
+        try {
+          const response = await fetch('https://api.coingecko.com/api/v3/search/trending');
+          const data = await response.json();
+
+          const top3TrendingCoins = data.coins.slice(0, 3);
+          setTrendingCoins(top3TrendingCoins);
+        } catch (error) {
+          console.error('Error fetching trending coins:', error);
+        }
+      };
+  
+      fetchTrendingCoins();
+    }, []);
   return (
     <div className="two-column-layout">
       <div className="column-one">
@@ -44,42 +59,24 @@ KoinX allows you to be more educated and aware of your tax reports.</p>
   </div>
         </div>
         <div className="column-two-row-two">
-
-         <h2>Trending Coins (24h)</h2>
-  <div className="activity-row">
-    <div className="activity-section">
-     
-      <span>Name 1</span>
-    </div>
-    <div className="activity-section-1">
-    <img src={Polygon} alt="Logo 1" />
-      <span>+5%</span>
-    </div>
-  </div>
-  <div className="activity-row">
-    <div className="activity-section">
-     
-      <span>etherium</span>
-    </div>
-    <div className="activity-section-1">
-    <img src={Polygon} alt="Logo 1" />
-      <span>+5%</span>
-    </div>
-  </div>
-  <div className="activity-row">
-    <div className="activity-section">
-     
-      <span>bitcoin</span>
-    </div>
-    <div className="activity-section-1">
-    <img src={Polygon} alt="Logo 1" />
-      <span>+5%</span>
-    </div>
-  </div>
-
-
-
-        </div>
+        <h2>Trending Coins (24h)</h2>
+        {trendingCoins.map((coin, index) => (
+          <div key={index} className="activity-row">
+            <div className="activity-section">
+              <img src={coin.item.thumb}/>
+              <span>{coin.item.name}</span>
+            </div>
+            <div className="activity-section-1">
+            <span>
+                  {coin.item.price_btc
+                    ? coin.item.price_btc.toFixed(10)
+                    : 'N/A'}
+                  %
+                </span>
+            </div>
+          </div>
+          ))}
+          </div>
       </div>
     </div>
   );
