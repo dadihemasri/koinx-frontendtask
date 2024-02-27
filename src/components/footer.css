@@ -1,0 +1,79 @@
+.footer {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  .you-may-like-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .crypto-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .crypto-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .price-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .prev-button {
+    left: 0;
+  }
+  
+  .next-button {
+    right: 0;
+  }
+  .carousel-container {
+    overflow-x: hidden; /* Hide horizontal scrollbar initially */
+    white-space: nowrap;
+}
+  
+  .carousel-item {
+    display: inline-block; /* Display carousel items in a row */
+    width: 300px; /* Adjust the width of each carousel item */
+  }
+  

@@ -1,0 +1,185 @@
+.column-one {
+  width: 881px; /* Fixed width of 881px */
+  height: 711px; /* Fixed height of 711px */
+  padding: 0px 0px 20px 0px; /* 0px top, 0px right, 20px bottom, 0px left padding */
+  gap: 20px; /* Gap between elements inside the column */
+  background-color: #ffffff;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+/* Updated TwoColumnLayout.css */
+body{
+  font-family: Inter, sans-serif;
+}
+.column-one-row-2{
+  height:574px;
+}
+.column-one-row-one{
+  display: flex;
+  align-items: center; /* Gray background color */
+  padding: 10px;
+  width: 250px;
+  justify-content: space-between;
+
+}
+.logo-heading{
+  display: flex;
+  align-items:center ;
+}
+
+  .bitcoin-logo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .b-text {
+    width: 81px;
+    height: 29px;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0B1426;/* Text color */
+    top: -1px;
+    margin-left: 8px;
+ 
+  }
+  .btc{
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #5D667B; /* Text color */
+    margin-left: 8px;
+  }
+  
+.rank-text{
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+color: #ffffff;
+border: 1px solid;
+padding: 5px;
+border-radius: 5px;
+background-color: #808A9D;
+}
+
+.column-two-row-one {
+  width: 426px;
+  height: 515px;
+  border-radius: 16px;
+  background-color: #0052FE;
+  margin-left: 30px;
+  
+}
+.two-column-layout{
+  display: flex;
+  justify-content: space-between;
+}
+/* Section 1 */
+.section1 {
+  width:  327px;
+  height:  182px;
+  padding: 20px;
+  
+}
+
+/* Section 1 Heading */
+.section1 h2 {
+  font-family: Inter;
+font-size: 24px;
+font-weight: 700;
+margin:0px 40px 0px 40px;
+line-height: 40px;
+letter-spacing: 0em;
+padding:10px;
+text-align: center;
+padding-left: 10px;
+  color: #ffffff;
+  width: 268px;
+height: 80px;
+
+}
+
+/* Section 1 Paragraph */
+.section1 p {
+  width: 327px;
+margin-left:17px;
+height: 68px;
+  font-family: Inter;
+  font-size: 14px;
+  color:#ffffff;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+.section2 img{
+  width: 178.66px;
+height: 166.22px;
+margin-left:100px;
+
+}
+.section3 button{
+  width: 237px;
+height: 48px;
+border-radius: 8px;
+margin-left: 90px;
+margin-top:20px;
+font-family: Inter;
+font-size: 16px;
+font-weight: 600;
+line-height: 28px;
+letter-spacing: 0em;
+
+
+border: 2px solid transparent; 
+}
+.column-two-row-two{
+  width: 426px;
+height: 225px;
+
+border-radius: 8px;
+margin: 24px;
+background-color: #ffffff;
+
+}
+.column-two-row-two h2{
+width: 379px;
+height: 29px;
+padding-left:24px;
+padding-top:24px;
+}
+
+.activity-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+margin-left: 24px;
+margin-right:24px;
+
+}
+.activity-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.activity-section-1{
+height:28px;
+padding: 4px;
+margin:4px;
+border-radius: 4px;
+display: flex;
+color: #14B079;
+background-color:#EBF9F4;
+font-size: 16px;
+align-items: center;
+}
