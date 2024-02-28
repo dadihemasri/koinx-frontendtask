@@ -3,3 +3,26 @@ body {
         overflow-x: hidden; 
     
   }
+  /* App.css */
+
+/* Default styles for components */
+.App {
+    width: 100%; /* Adjust as needed */
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+  }
+  
+  /* Media query for mobile view */
+  @media (max-width: 768px) {
+    /* Stack components vertically */
+    .navbar,
+    .heading,
+    .TwoColumnLayout,
+    .footer {
+      display: block;
+      width: 100%;
+    }
+  
+    /* Adjust specific styles for mobile view if necessary */
+  }
+  

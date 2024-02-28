@@ -1,58 +1,57 @@
-/* FooterCarousel.css */
 .footer-carousel {
-  width: 80%;
-  margin: auto;
+  width: 1440px; /* Set the width to 1440px */
+  background-color: white;
   overflow: hidden;
+  position: relative; /* Ensure the footer layout is absolutely positioned */
+  padding: 20px; /* Add padding to the top, right, bottom, and left */
+  margin-left: -25px; /* Align to the right side */
+  margin-right: auto; /* Align to the left side */
 }
 
 .carousel-container {
   display: flex;
-  transition: transform 0.3s ease-in-out;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+  padding-left: 20px; /* Adjust to match the padding of the footer */
+  padding-right: 20px; /* Adjust to match the padding of the footer */
+  margin-left: -20px; /* Adjust to remove the left padding */
+  margin-right: -20px; /* Adjust to remove the right padding */
 }
 
 .carousel-item {
   flex: 0 0 auto;
-  width: 300px; /* Adjust the width of each carousel item */
-  text-align: center;
-  padding: 20px;
-  border: 1px solid #ddd;
+  width: 300px; /* Adjust width as needed */
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #fff;
-  margin-right: 10px; /* Adjust the margin between items */
-  position: relative;
-}
-
-.price-info {
-  margin-bottom: 10px;
-}
-
-.action-button {
-  background-color: #3498db;
-  color: #fff;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.action-button:hover {
-  background-color: #2980b9;
+  margin-right: 10px; /* Add margin between carousel items */
 }
 
 .nav-button {
-  font-size: 24px;
-  color: #3498db;
-  padding-right: 100px;
-  background: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
   border: none;
-  cursor: pointer;
   outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #333;
 }
 
-.nav-button:hover {
-  color: #2980b9;
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: -40px; /* Adjust the value as needed to align with the last column */
+}
+@media screen and (max-width: 768px) {
+  .footer-carousel{
+    margin-top: -1050px;
+    width:92.5%;
+    margin-left: 0;
+    
+  }
 }
